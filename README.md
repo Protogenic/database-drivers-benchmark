@@ -5,7 +5,7 @@ In this project I compared the work of different database drivers using four que
 **Dataset** — “New York Taxi Rides”, 209.3MB, 1,048,576 rows. 
 
 The benchmark includes four queries executed on 3 database drivers. Each query was executed 10 times on each driver and the graph shows the average values.
-![Benchmark chart](https://github.com/Protogenic/database-drivers-benchmark/assets/82569672/c4c419e7-e117-45df-b777-df5c612501a5)
+![Benchmark chart](https://github.com/Protogenic/database-drivers-benchmark/assets/82569672/8be7554a-aca8-4b46-810a-61bd6ba0ec06)
 
 ### Queries
 **Query 1:**
@@ -48,7 +48,8 @@ PostgreSQL is quite well optimized for general use cases. This means that read p
 ### Sqlite
 First of all, Sqlite stands out for its ease of integration, it does not need to be installed and is easy to use. It’s also worth noting the variety of drivers that can be used with Sqlite. From the minuses, the graph shows that Sqlite suffers most of all on the same queries as Postgres, but is inferior to it in terms of execution time on all four.
 ### Dataframe
-The first thing that catches your eye is the stability in execution time on various queries, although Dataframe is inferior in time to Postgres on the first two queries, with increasing complexity of queries the execution time on Dataframe practically does not change. Another big advantage in this project is the ability to work directly with a csv table, without complex import of data into databases
-### Comparison
-Postgres requires more time and effort to set up and maintain than SQLite.
+The first thing that catches your eye is the stability in execution time on various queries, although Dataframe is inferior in time to Postgres on the first two queries, with increasing complexity of queries the execution time on Dataframe practically does not change. Another big advantage in this project is the ability to work directly with a csv table, without complex import of data into databases.
 
+### Comparison
+Postgres requires more time and effort to set up and maintain than SQLite. SQLite may be the better choice if you need a simple and lightweight database engine that is easy to use and requires minimal setup. PostgreSQL may be the better choice if you need a more powerful and fast engine. Dataframe is more suitable for large data mining and manipulations, the query optimizations and so on.
+Overall, at places, where simple data manipulations, like data retrieval, handling, join, filtering is performed, what were executed in this project, PostgreSQL can be considered the best choice to use between these three drivers.
